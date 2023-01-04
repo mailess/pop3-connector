@@ -1,6 +1,6 @@
 {
   "name": "pop-connector",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "",
   "types": "dist/index.d.ts",
   "main": "dist/index.js",
@@ -19,11 +19,11 @@
   },
   "homepage": "https://github.com/mailess/pop3-connector#readme",
   "dependencies": {
-    "mailparser": "^3.6.3"
+    "mailparser": "^3.6.3",
+    "node-pop3": "^0.8.0"
   },
   "devDependencies": {
     "@types/node": "^18.11.18",
-    "dotenv": "^16.0.3",
-    "node-pop3": "^0.8.0"
+    "dotenv": "^16.0.3"
   }
 }
