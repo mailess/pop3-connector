@@ -6,18 +6,19 @@ const {POPConnector} = require('../dist')
 
 setImmediate(async () => {
     try {
-        const imap = new POPConnector({
+        const popConnector = new POPConnector({
             hostname: 'pop.mail.yahoo.com',
             port: 995,
             username: process.env.USERNAME,
             password: process.env.PASSWORD,
             security: 'ssl_tls'
         })
-        const {count_messages} = await imap.stats()
+        // await imap.test()
 
-        const result = await imap.fetchOne(count_messages)
-        console.log('result:', result.message_id)
+        const result = await popConnector.fetchOne(4)
+        console.log('result:', result)
 
+        await popConnector.quit()
     } catch (error) {
         console.error('ERROR', error)
     }

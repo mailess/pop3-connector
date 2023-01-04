@@ -23,9 +23,15 @@ export class POPConnector {
         })
     }
 
+    public async test(): Promise<boolean> {
+        await this.client.STAT()
+        console.log('connected!')
+
+        return true
+    }
+
     public async stats(): Promise<StatsResult> {
         const stat = await this.client.STAT()
-        console.log('stat:', stat)
         if (!stat) {
             throw new Error('Something went wrong!')
         }
@@ -54,8 +60,13 @@ export class POPConnector {
             message_id: messageId,
             subject,
             date,
-            seq,
+            seq
         }
+    }
+
+    public async quit(): Promise<void> {
+        await this.client.QUIT()
+        console.log('Bye!')
     }
 }
 
