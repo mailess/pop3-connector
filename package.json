@@ -2,7 +2,8 @@
   "name": "pop3-connector",
   "version": "1.0.0",
   "description": "",
-  "main": "index.js",
+  "types": "dist/index.d.ts",
+  "main": "dist/index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -16,5 +17,9 @@
   "bugs": {
     "url": "https://github.com/mailess/pop3-connector/issues"
   },
-  "homepage": "https://github.com/mailess/pop3-connector#readme"
+  "homepage": "https://github.com/mailess/pop3-connector#readme",
+  "dependencies": {},
+  "devDependencies": {
+    "node-pop3": "^0.8.0"
+  }
 }
