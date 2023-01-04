@@ -1,5 +1,5 @@
 {
-  "name": "pop3-connector",
+  "name": "pop-connector",
   "version": "1.0.0",
   "description": "",
   "types": "dist/index.d.ts",
@@ -18,8 +18,12 @@
     "url": "https://github.com/mailess/pop3-connector/issues"
   },
   "homepage": "https://github.com/mailess/pop3-connector#readme",
-  "dependencies": {},
+  "dependencies": {
+    "mailparser": "^3.6.3"
+  },
   "devDependencies": {
+    "@types/node": "^18.11.18",
+    "dotenv": "^16.0.3",
     "node-pop3": "^0.8.0"
   }
 }
